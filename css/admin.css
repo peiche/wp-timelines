@@ -1,0 +1,12 @@
+.select2-container {
+  width: 100% !important; /* overrides inline style */
+}
+
+#view-icon {
+  margin-bottom: 10px;
+}
+
+#view-icon svg {
+    height: 3em;
+    width: 3em;
+}

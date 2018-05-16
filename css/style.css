@@ -1,0 +1,256 @@
+.timelines-timeline {
+	position: relative;
+	padding: 2em 0;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+.timelines-timeline:before {
+	content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 4px;
+  background: #ccc;
+}
+
+.timelines-block {
+	position: relative;
+	margin: 2em 0;
+}
+.timelines-block:after {
+	content: '';
+  display: table;
+  clear: both;
+}
+.timelines-block:first-child {
+	margin-top: 0;
+}
+.timelines-block:last-child {
+	margin-bottom: 0;
+}
+
+.timelines-icon {
+	position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.timelines-icon svg {
+  width: 1em;
+  height: 1em;
+	display: block;
+  position: relative;
+  margin: auto;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.timelines-content,
+.timelines-intersects {
+	position: relative;
+  margin-left: 60px;
+  background: #eee;
+  padding: 1em;
+}
+.timelines-content:before {
+	content: '';
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-right: 7px solid #eee;
+}
+.timelines-content:after {
+	content: '';
+  display: table;
+  clear: both;
+}
+
+.timelines-content .timelines-post-notice {
+	display: none;
+}
+
+.timelines-image {
+	position: absolute;
+	top: 0;
+	left: -7px;
+	right: 0;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+}
+.timelines-image:before,
+.timelines-image:after {
+	content: '';
+	position: absolute;
+	width: 0;
+	border: 7px solid transparent;
+	border-left-color: #fff;
+	z-index: 1;
+}
+.timelines-image:before {
+	top: 0;
+  border-top-width: 0;
+  height: 23px;
+}
+.timelines-image:after {
+	top: 24px;
+	left: 0;
+	border-bottom-width: 0;
+	bottom: 0;
+}
+
+.timelines-image--overlay {
+	position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.timelines-content.has-image .timelines-title,
+.timelines-content.has-image p,
+.timelines-content.has-image .timelines-link,
+.timelinestimelines-content.has-image .timelines-date {
+	position: relative;
+	color: #fff;
+}
+
+.timelines-link-cover {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: 0;
+	z-index: 1;
+}
+.timelines-link-cover:hover {
+	border: 0;
+}
+
+.timelines-title {
+	margin-top: 0;
+	font-size: 20px;
+}
+
+.timelines-content p {
+	margin: 1em 0 0;
+  line-height: 1.6;
+}
+
+.timelines-date {
+	display: block;
+  padding: .8em 0 0;
+	color: #333;
+  opacity: .7;
+}
+
+.timelines-intersects {
+	border-top: 1px solid #fff;
+}
+
+@media only screen and (min-width: 1170px) {
+	.timelines-timeline {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  .timelines-timeline:before {
+    left: 50%;
+    margin-left: -2px;
+  }
+
+	.timelines-block {
+    margin: 4em 0;
+  }
+  .timelines-block:first-child {
+    margin-top: 0;
+  }
+  .timelines-block:last-child {
+    margin-bottom: 0;
+  }
+
+	.timelines-icon {
+		width: 60px;
+    height: 60px;
+    left: 50%;
+    margin-left: -30px;
+    -webkit-transform: translateZ(0);
+		transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+	}
+	
+	.timelines-icon svg {
+    width: 1.5em;
+    height: 1.5em;
+	}
+
+  .timelines-content,
+	.timelines-intersects {
+    margin-left: 0;
+    padding: 1.6em;
+    width: 45%;
+  }
+  .timelines-content:before {
+    top: 24px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: #eee;
+  }
+
+	.timelines-image:before {
+		height: 30px;
+	}
+	.timelines-image:after {
+		top: 30px;
+	}
+
+	.timelines-block:nth-child(odd) .timelines-image {
+		left: 0;
+		right: -7px;
+	}
+	.timelines-block:nth-child(odd) .timelines-image:before,
+	.timelinestimelines-block:nth-child(odd) .timelines-image:after {
+		left: auto;
+		right: 0;
+		border-left-color: transparent;
+		border-right-color: #fff;
+	}
+
+  .timelines-link {
+    float: left;
+  }
+  .timelines-date,
+	.timelines-content.has-image .timelines-date {
+    position: absolute;
+    width: 100%;
+    left: 122%;
+    top: 0px;
+		color: #333;
+  }
+  .timelines-block:nth-child(even) .timelines-content {
+    float: right;
+  }
+  .timelines-block:nth-child(even) .timelines-content:before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: #eee;
+  }
+  .timelines-block:nth-child(even) .timelines-date {
+    left: auto;
+    right: 122%;
+    text-align: right;
+  }
+}
